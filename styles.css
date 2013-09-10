@@ -1,0 +1,31 @@
+body {
+			margin: 10px;
+			padding: 0 0 20px;
+			min-height: 100%;
+			font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+			font-size: 10px;
+			}
+table{font-size: 10px;}			
+
+body.home, body.home table{font-size: 12px;}
+
+#workspace-tabs li .ui-icon-close {
+  cursor: pointer;
+  float: left;
+  margin: 0.4em 0.2em 0 0;
+}
+#console{margin:0px auto; float:left; width:100%;}
+#options{width:19%; float:left;}
+#workspace{float:right; width:80%;}
+.clear{clear:both;}
+
+#options li{margin:0; padding:0;}
+#options ul{margin:0; padding:0;}
+
+.cfmlcode{border:2px dashed red; background-color:#e0e0e0; padding:5px;}
+input, select{width:300px;}
+
+.fail, .success{font-weight:bold;}
+.fail{color:red;}
+.success{color:green;}
+.communicating{text-align:center;}
