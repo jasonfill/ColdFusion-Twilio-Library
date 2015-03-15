@@ -114,7 +114,8 @@
 		
 		<cfset payload["iss"] = variables.instance.AccountSid />
 		<!--- Force the exp to string and divide by 1000 otherwise the timestamp is too precise...thanks to Mario Rodrigues (@webauthor) for this find... --->
-		<cfset payload["exp"] = "" & ToString((now().getTime() / 1000) + val(Arguments.timeout)) />
+		<!--- Date convert local to UTC --->
+		<cfset payload["exp"] = "" & ToString((dateConvert("local2utc", now()).getTime() / 1000) + val(Arguments.timeout)) />
 		<cfset payload["scope"] = ListChangeDelims(variables.instance.Scopes, " ") /> 
 		
 		<cfreturn jwtEncode(payload, variables.instance.AuthToken) />
